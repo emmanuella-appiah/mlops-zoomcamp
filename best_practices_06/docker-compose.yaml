@@ -1,0 +1,10 @@
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566"  # Gateway port
+      - "4572:4572"  # S3 port
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
