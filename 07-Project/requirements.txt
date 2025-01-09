@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+mlflow
+seaborn
+scikit-learn 
+xgboost
+mlflow
+joblib
+prefect
+evidently
