@@ -27,4 +27,4 @@ COPY deployment/predict.py .
 EXPOSE 9696 5000
 
 # Command to run MLflow server and Flask app concurrently
-CMD ["sh", "-c", "mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts --host 0.0.0.0 --port 5000 & python predict.py"]
+CMD ["sh", "-c", "mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts --host 0.0.0.0 --port 5000 & gunicorn -b 0.0.0.0:9696 predict:app"]
