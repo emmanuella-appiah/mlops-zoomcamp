@@ -10,7 +10,8 @@ house_data = {
     "Longitude": -128.23
 }
 
-url = 'http://127.0.0.1:9696/predict'
+#url = 'http://127.0.0.1:9696/predict'
+url = "https://mlops-zoomcamp.onrender.com/predict"
 response = requests.post(url, json=house_data)
 print(f"Response Status Code: {response.status_code}")
 
